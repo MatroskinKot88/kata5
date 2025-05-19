@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url(font/TTLakes-ExtraBold.woff);
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url(font/TTLakes-Bold.woff);
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url(font/TTLakes-Regular.woff)
+}
+
+/* Основные стили */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F8F8;
+}
+
+.header {
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    height: 56px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'TT Lakes';
+    color: #7E7E82;
+
+}
+
+.content-block {
+    position: relative;
+}
+
+
+@media (max-width: 320px){
+    .tablet-list {
+        display: none;
+    }
+
+    .desktop-list {
+        display: none;
+    }
+
+    
+
+}
+
+@media (min-width: 325px, max-width: 770px) {
+    .swiper-container {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* Стили для десктопного списка */
+/* .desktop-list { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.content-item {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.content-item:hover {
+    background-color: #e0e0e0;
+}
+ */
+/* Стили для кнопки */
+  .toggle-btn { 
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color:  #F8F8F8;
+    color: #1B1C21;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'TT Lakes';
+} 
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+/* Стили для мобильного слайдера */
+.mobile-swiper {
+    display: none;
+    width: 100%;
+    padding-bottom: 30px; /* Для пагинации */
+}
+
+.swiper-slide {
+    width: auto !important; /* Переопределяем ширину слайда */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .desktop-list {
+        display: none;
+    }
+    
+    .mobile-swiper {
+        display: block;
+    }
+    
+    /* Скрываем дополнительные элементы при свернутом состоянии */
+    .desktop-list.collapsed .content-item:nth-child(n+5),
+    .mobile-swiper.collapsed .swiper-slide:nth-child(n+5) {
+        display: none;
+    }
+} 
