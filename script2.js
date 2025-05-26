@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  import Swiper from 'swiper-bundle.js';
-  import 'swiper-bundle.css';
-
+if (window.innerWidth <= 768) {
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -11,17 +9,24 @@ const swiper = new Swiper('.swiper', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-    dymanicBullets: true,
+    dynamicBullet: true,
   },
 })
+}
 
-
-// Кнопка
-const toggleButton = document.querySelector('.brands__toggle-button');
+// КНОПКА
+const showButton = document.querySelector('.show-more-btn__button');
 const brandsGrid = document.querySelector('.brands__grid');
 
-toggleButton.addEventListener('click', function () {
-    brandsGrid.classList.toggle('.brands__grid--show');
+showButton.addEventListener('click', function () {
+  brandsGrid.classList.toggle('..brands__grid--show');
+   
+  if (brandsGrid.classList.contains('..brands__grid--show')) {
+    showButton.textContent = 'Скрыть';
+  } else {
+    showButton.textContent = 'Показать все';
+  }
+})
 })
 
-})
+
