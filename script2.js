@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  if(window.innerWidth <= 767) {
-const swiper = new Swiper('.swiper-wrapper', {
+  import Swiper from 'swiper-bundle.js';
+  import 'swiper-bundle.css';
+
+const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -12,7 +14,7 @@ const swiper = new Swiper('.swiper-wrapper', {
     dymanicBullets: true,
   },
 })
-}
+
 
 // Кнопка
 const toggleButton = document.querySelector('.brands__toggle-button');

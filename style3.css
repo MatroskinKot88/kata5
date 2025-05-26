@@ -55,13 +55,17 @@
 
 /* Кнопка */
 
-.brands__toggle {
+.show-more-btn {
     display: flex;
     width: 134px;
     height: 24px;
 }
 
-.brands__toggle-button {
+.show-more-btn__icon {
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn__button {
     font-family: 'TT Lakes';
     font-size: 14px;
     background: none;
@@ -69,7 +73,7 @@
     cursor: pointer;
 }
 
-.brands__toggle-button:hover {
+.bshow-more-btn__button:hover {
     opacity: 0.6;
     transition-property: opacity;
     transition-duration: 300ms;
@@ -77,7 +81,7 @@
 
 /* Слайдер */
 
-.brands__swiper {
+.swiper-container {
     display: none;
     width: 100%;
     padding-bottom: 30px;
@@ -107,11 +111,12 @@
         display: none;
     }
 
-    .brands__toggle {
+    .show-more-btn  {
         display: none;
     }
+        
 
-    .brands__swiper {
+    .swiper-container {
         display: block;
     }
 }
