@@ -42,9 +42,14 @@
     margin: 0 auto;
 }
 
+.brands__grid li {
+    list-style: none;
+}
+
 .brands__card {
     width: 240px;
     height: 72px;
+    border-radius: 16px;
 }
 
 .brands__card:hover {
